@@ -3,10 +3,11 @@ public class power2_recursion {
         if(q==0){
             return 1;
         }
+        int halfpower = Power(p, q/2);
         if(q%2==0){
-            return Power(p, q/2)*Power(p,q/2);
+            return halfpower*halfpower;
         }
-        return p*Power(p, q/2)*Power(p,q/2);
+        return p*halfpower*halfpower;
     }
     public static void main(String[] args) {
         System.out.println(Power(2,4));
