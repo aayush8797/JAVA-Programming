@@ -1,12 +1,9 @@
 public class Max_array_recursion {
     public static int max(int arr[],int i){
-
         if(i==arr.length-1){
             return arr[i];
         }
-
         int smallAns = max(arr, i+1);
-
         return Math.max(arr[i],smallAns);
     }
     public static void main(String[] args) {
