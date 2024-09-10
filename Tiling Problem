@@ -1,0 +1,14 @@
+public class tiling{
+    public static int tiles(int n){
+        if(n==0 || n==1){
+            return 1;
+        }
+        int vertical = tiles(n-1);
+        int horizontal = tiles(n-2);
+        return vertical+horizontal;
+    }
+    public static void main(String[] args) {
+        int n= 4;
+        System.out.println(tiles(n));
+    }
+}
